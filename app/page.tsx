@@ -1,6 +1,13 @@
+'use client';
+
 import Image from "next/image";
+import { useState } from "react";
+import Modal from "@/components/Modal";
 
 export default function Home() {
+  const [isStudentModalOpen, setIsStudentModalOpen] = useState(false);
+  const [isEmployerModalOpen, setIsEmployerModalOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-[#1a1a1a] flex flex-col items-center justify-center p-8 relative overflow-hidden">
       {/* Logo and Tagline */}
@@ -34,6 +41,12 @@ export default function Home() {
           <p className="mt-6 text-[#f5e6d3] text-center max-w-xs">
             Find opportunities that match your skills instantly
           </p>
+          <button
+            onClick={() => setIsStudentModalOpen(true)}
+            className="mt-4 bg-[#e05745] hover:bg-[#c74636] text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            Notify Me
+          </button>
         </div>
 
         {/* Bidirectional Arrows */}
@@ -68,6 +81,12 @@ export default function Home() {
           <p className="mt-6 text-[#f5e6d3] text-center max-w-xs">
             Connect with qualified candidates immediately
           </p>
+          <button
+            onClick={() => setIsEmployerModalOpen(true)}
+            className="mt-4 bg-[#e05745] hover:bg-[#c74636] text-white font-semibold py-2 px-6 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl"
+          >
+            Notify Me
+          </button>
         </div>
       </div>
 
@@ -111,6 +130,18 @@ export default function Home() {
         </button>
         <p className="mt-4 text-[#a8a8a8] text-sm">www.mydurangotango.com</p>
       </div>
+
+      {/* Modals */}
+      <Modal
+        isOpen={isStudentModalOpen}
+        onClose={() => setIsStudentModalOpen(false)}
+        type="student"
+      />
+      <Modal
+        isOpen={isEmployerModalOpen}
+        onClose={() => setIsEmployerModalOpen(false)}
+        type="employer"
+      />
     </div>
   );
 }

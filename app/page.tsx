@@ -23,6 +23,9 @@ export default function Home() {
         <h1 className="text-[#f5e6d3] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center tracking-tight px-2">
           Your next job finds you.
         </h1>
+        <p className="text-[#f5e6d3] text-lg sm:text-xl md:text-2xl text-center mt-2">
+          Coming Fall 2025
+        </p>
       </div>
 
       {/* Main Content - Two Sides */}
@@ -123,12 +126,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Call to Action */}
+      {/* Website URL */}
       <div className="mt-12 sm:mt-16 flex flex-col items-center px-4">
-        <button className="bg-[#e05745] hover:bg-[#c74636] text-white font-bold py-3 px-6 sm:py-4 sm:px-8 rounded-full text-base sm:text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-          Join Early Access
-        </button>
-        <p className="mt-3 sm:mt-4 text-[#a8a8a8] text-xs sm:text-sm">www.mydurangotango.com</p>
+        <p className="text-[#a8a8a8] text-xs sm:text-sm">www.mydurangotango.com</p>
       </div>
 
       {/* Modals */}

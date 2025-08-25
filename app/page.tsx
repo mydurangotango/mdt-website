@@ -9,31 +9,31 @@ export default function Home() {
   const [isEmployerModalOpen, setIsEmployerModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 relative overflow-hidden">
+    <div className="min-h-screen bg-[#1a1a1a] flex flex-col items-center justify-start p-4 sm:p-6 md:p-8 relative overflow-hidden">
       {/* Logo and Tagline */}
-      <div className="absolute top-4 sm:top-6 md:top-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center z-20 w-full px-4">
+      <div className="flex flex-col items-center z-20 w-full px-4 mt-8 sm:mt-12 md:mt-16 lg:mt-20">
         <Image
           src="/mdt_logo_transparent_background_708x708.png"
           alt="Durango Tango logo"
           width={120}
           height={120}
           priority
-          className="mb-2 sm:mb-4 w-20 h-20 sm:w-24 sm:h-24 md:w-30 md:h-30"
+          className="mb-2 sm:mb-4 w-16 h-16 xs:w-20 xs:h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32"
         />
-        <h1 className="text-[#f5e6d3] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center tracking-tight px-2">
+        <h1 className="text-[#f5e6d3] text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-center tracking-tight px-2 leading-tight">
           Your next job finds you.
         </h1>
-        <p className="text-[#f5e6d3] text-lg sm:text-xl md:text-2xl text-center mt-2">
+        <p className="text-[#f5e6d3] text-base xs:text-lg sm:text-xl md:text-2xl text-center mt-2">
           Coming Fall 2025
         </p>
       </div>
 
       {/* Main Content - Two Sides */}
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-16 w-full max-w-6xl mt-40 sm:mt-44 md:mt-48 lg:mt-32">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-12 xl:gap-16 w-full max-w-6xl mt-8 sm:mt-12 md:mt-16 lg:mt-20">
         
         {/* Students Side */}
         <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:scale-105">
-          <div className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-[#3a7b85] rounded-2xl flex flex-col items-center justify-center shadow-2xl relative">
+          <div className="w-32 h-32 xs:w-36 xs:h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 bg-[#3a7b85] rounded-2xl flex flex-col items-center justify-center shadow-2xl relative">
             <svg className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-[#f5e6d3]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 3L1 9L12 15L21 10.09V17H23V9M5 13.18V17.18L12 21L19 17.18V13.18L12 17L5 13.18Z"/>
             </svg>
@@ -53,19 +53,19 @@ export default function Home() {
         </div>
 
         {/* Bidirectional Arrows */}
-        <div className="flex flex-row lg:flex-col items-center justify-center gap-2 sm:gap-3 md:gap-4 my-4 lg:my-0">
+        <div className="flex flex-row lg:flex-col items-center justify-center gap-1 xs:gap-2 sm:gap-3 md:gap-4 my-4 lg:my-0">
           <div className="relative">
             {/* Top/Left Arrow */}
-            <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-[#f5e6d3] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 text-[#f5e6d3] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M7 12h10m0 0l-3-3m3 3l-3 3" className="lg:rotate-0 rotate-90"/>
             </svg>
           </div>
-          <div className="text-[#f5e6d3] text-sm sm:text-base md:text-lg font-medium px-3 py-1 sm:px-4 sm:py-2 bg-[#2a4a52] rounded-lg whitespace-nowrap">
+          <div className="text-[#f5e6d3] text-xs xs:text-sm sm:text-base md:text-lg font-medium px-2 py-1 xs:px-3 xs:py-1 sm:px-4 sm:py-2 bg-[#2a4a52] rounded-lg whitespace-nowrap">
             AI Matches
           </div>
           <div className="relative">
             {/* Bottom/Right Arrow */}
-            <svg className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 text-[#f5e6d3] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg className="w-8 h-8 xs:w-10 xs:h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 text-[#f5e6d3] animate-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M17 12H7m0 0l3 3m-3-3l3-3" className="lg:rotate-0 rotate-90"/>
             </svg>
           </div>
@@ -73,7 +73,7 @@ export default function Home() {
 
         {/* Employers Side */}
         <div className="flex flex-col items-center group cursor-pointer transition-all duration-300 hover:scale-105">
-          <div className="w-36 h-36 sm:w-40 sm:h-40 md:w-48 md:h-48 bg-[#3a7b85] rounded-2xl flex flex-col items-center justify-center shadow-2xl relative">
+          <div className="w-32 h-32 xs:w-36 xs:h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 lg:w-48 lg:h-48 bg-[#3a7b85] rounded-2xl flex flex-col items-center justify-center shadow-2xl relative">
             <svg className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-[#f5e6d3]" fill="currentColor" viewBox="0 0 24 24">
               <path d="M10,2H14A2,2 0 0,1 16,4V6H20A2,2 0 0,1 22,8V19A2,2 0 0,1 20,21H4C2.89,21 2,20.1 2,19V8C2,6.89 2.89,6 4,6H8V4C8,2.89 8.89,2 10,2M14,6V4H10V6H14Z"/>
             </svg>
@@ -94,7 +94,7 @@ export default function Home() {
       </div>
 
       {/* Features */}
-      <div className="mt-12 sm:mt-16 md:mt-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl text-center px-4">
+      <div className="mt-8 sm:mt-12 md:mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-4xl text-center px-4">
         <div className="flex flex-col items-center">
           <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#e05745] rounded-lg flex items-center justify-center mb-2 sm:mb-3">
             <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -127,7 +127,7 @@ export default function Home() {
       </div>
 
       {/* Website URL */}
-      <div className="mt-12 sm:mt-16 flex flex-col items-center px-4">
+      <div className="mt-8 sm:mt-12 mb-4 flex flex-col items-center px-4">
         <p className="text-[#a8a8a8] text-xs sm:text-sm">www.mydurangotango.com</p>
       </div>
 
